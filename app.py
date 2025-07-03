@@ -8,7 +8,7 @@ st.title("🛍️ Daraz Price Tracker (Bangladesh)")
 url = st.text_input("🔗 Enter a Daraz product URL (daraz.com.bd):")
 
 def extract_product_id(daraz_url):
-    match = re.search(r"-p(\d+)", daraz_url)
+    match = re.search(r"-i(\d+)", daraz_url)
     return match.group(1) if match else None
 
 if url and "daraz.com.bd" not in url:
